@@ -87,7 +87,7 @@ while ($i<50) {	//test 50 random orders within the range
     $addressid = rand(174330,175846);
     $token = rm_generate_token();
     $addresscheck = rm_check_address($token,$addressid);
-    if ($addresscheck==false) {
+    if ($addresscheck!==false) {
         $addresscheck = rm_check_address($token,$addressid);    //retry same one
     }
     $i++;
